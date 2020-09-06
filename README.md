@@ -14,6 +14,9 @@ import { Tinify } from "https://deno.land/x/tinify/mod.ts";
 // Read file frome the server
 const img = await Deno.readFile('test/Uncompressed-image.jpg') ; 
 
+// Image URL
+const imgURL = "https://www.gravatar.com/avatar/ea52ed86c481ca2816b8403acdbc9169?s=512"
+
 // Replace <API_KEY> with your tinify api key for more info visite https://tinypng.com/developers
 const tinify = new Tinify({
     api_key:"<API_KEY>"
