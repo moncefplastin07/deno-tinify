@@ -1,0 +1,1 @@
+export { Tinify } from "./tinifyCompressor.ts";
