@@ -20,7 +20,7 @@ const tinify = new Tinify({
 })
 
 const compressedImage:any = await (await tinify.compress(img)) // Image compression process from Uint8Array encode (file)
-const compressedImage:any = await (await tinify.compress(imgURL)) // Image compression process from url
+const compressedImageFromURl:any = await (await tinify.compress(imgURL)) // Image compression process from url
 
 console.log(await compressedImage.saveTo('test/Compressed-image.jpg')) // save new compressed image in the server
  ```
