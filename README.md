@@ -6,6 +6,7 @@ simple URL validator with Typescript for Deno 🦕
 - ``--allow-write`` : for create new Image after compression process
 ## Authentication:
 You must have a valid Tinify ``API key`` (you can get your own from [here](https://tinypng.com/developers))
+
 **If you need to save the compressed image to a server** :
  
 ```js
@@ -61,12 +62,12 @@ console.log(await compressedImage.saveTo('test/Compressed-image.jpg'))
   base64Image: "base64 string of the compressed image"
 }
 ```
-## After (``Compressed``)
+## After (``Compressed``):
 - Size: 168904 Byte (164.9 KB)
 
 ![Comressed image](https://raw.githubusercontent.com/moncefplastin07/deno-tinify/master/test/Compressed-image.jpg)
 **``This picture is taken from Unsplash``** [Unsplash](https://unsplash.com/photos/IKUYGCFmfw4)
-## Before (``Original``)
+## Before (``Original``):
 - Size: 402678 Byte (393.2 KB)
 
 ![Uncomressed image](https://raw.githubusercontent.com/moncefplastin07/deno-tinify/master/test/Uncompressed-image.jpg)
