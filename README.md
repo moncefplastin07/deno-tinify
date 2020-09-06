@@ -19,7 +19,8 @@ const tinify = new Tinify({
     api_key:"<API_KEY>"
 })
 
-const compressedImage:any = await (await tinify.compress(img)) // Image compression process
+const compressedImage:any = await (await tinify.compress(img)) // Image compression process from Uint8Array encode (file)
+const compressedImage:any = await (await tinify.compress(imgURL)) // Image compression process from url
 
 console.log(await compressedImage.saveTo('test/Compressed-image.jpg')) // save new compressed image in the server
  ```
@@ -42,10 +43,10 @@ console.log(await compressedImage.saveTo('test/Compressed-image.jpg')) // save n
 **If you need to convert the compressed image to base64 string** :
 ```js
 
-const compressedImage:any = await (await tinify.compress(img)) // Image compression process from Uint8Array encode (file)
-const compressedImage:any = await (await tinify.compress(imgURL)) // Image compression process from url
+const compressedImage:any = await (await tinify.compress(img)) // Image compression process from Uint8Array encode (file) or url
 
-console.log(await compressedImage.saveTo('test/Compressed-image.jpg'))
+
+console.log(await compressedImage.toBase64())
 ```
 ## Output:
 ```js
